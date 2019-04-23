@@ -17,16 +17,16 @@ public class consultations{
 				pstmt.setString(2, surname);
 				pstmt.setString(3, nationalid);
 				pstmt.setString(4, patientid);
-				pstmt.setString(5, date);
+				pstmt.setDate(5, date);
 				pstmt.setString(6, paymentid);
 				pstmt.setString(7, description);
 				pstmt.setString(8, sex);
-				pstmt.setString(9, age); 
+				pstmt.setBigint(9, age); 
 				pstmt.setString(10, address); 
 				pstmt.setString(11, occupation); 
-				pstmt.setString(12, dob);
+				pstmt.setDate(12, dob);
 				pstmt.setString(13, relevanthistory);
-				pstmt.setString(14, cell);
+				pstmt.setBigint(14, cell);
 				pstmt.setString(15, medicalaid);
 				pstmt.setString(16, medicalaidnumber);
 				pstmt.setString(17, suffix);
@@ -73,4 +73,5 @@ public static void callPatient (String name, String surname, String nationalid, 
 			System.err.println(e.getMessage());
 		}
 	}
+}
 	
